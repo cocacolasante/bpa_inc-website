@@ -1,0 +1,125 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{{.Title}}</title>
+    <meta name="description" content="{{.Description}}">
+
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="AI automation, workflow automation, N8N, business automation, API integrations, cloud infrastructure, AI workflows, small business automation">
+    <meta name="author" content="Blueprint Automations">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{{.Title}}">
+    <meta property="og:description" content="{{.Description}}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Blueprint Automations">
+    <meta property="og:image" content="/static/images/bpa-logo.jpg">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{.Title}}">
+    <meta name="twitter:description" content="{{.Description}}">
+    <meta name="twitter:image" content="/static/images/bpa-logo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/static/images/bpa-logo.jpg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <img src="/static/images/bpa-logo.jpg" alt="Blueprint Automations Logo" class="logo-image">
+                    <div class="logo-text-wrapper">
+                        <span class="logo-text">Blueprint Automations</span>
+                    </div>
+                </a>
+
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/" class="nav-link {{if eq .Page "home"}}active{{end}}">Home</a></li>
+                    <li><a href="/about" class="nav-link {{if eq .Page "about"}}active{{end}}">About</a></li>
+                    <li><a href="/services" class="nav-link {{if eq .Page "services"}}active{{end}}">Services</a></li>
+                    <li><a href="/portfolio" class="nav-link {{if eq .Page "portfolio"}}active{{end}}">Portfolio</a></li>
+                    <li><a href="/contact" class="nav-link {{if eq .Page "contact"}}active{{end}} btn-primary">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {{template "content" .}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="/static/images/bpa-logo.jpg" alt="Blueprint Automations" class="footer-logo-image">
+                    <h3 class="footer-logo">Blueprint Automations</h3>
+                    <p class="footer-tagline">Bringing structure to the chaos</p>
+                    <p class="footer-description">Building clean, automated systems that let your business run with clarity and ease.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li>AI Workflow Automation</li>
+                        <li>N8N Implementation</li>
+                        <li>API Integrations</li>
+                        <li>Cloud Infrastructure</li>
+                        <li>Custom Development</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Get In Touch</h4>
+                    <p>Ready to automate your business?</p>
+                    <a href="/contact" class="btn-secondary">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blueprint Automations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
+{{end}}
