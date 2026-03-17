@@ -360,3 +360,144 @@ const debouncedScroll = debounce(function() {
 }, 100);
 
 window.addEventListener('scroll', debouncedScroll);
+
+// ===================================
+// Pricing Toggle — Monthly / Annual
+// ===================================
+const billingToggle = document.getElementById('billingToggle');
+
+if (billingToggle) {
+    billingToggle.addEventListener('change', function() {
+        const isAnnual = this.checked;
+        const amounts = document.querySelectorAll('.monthly-amount');
+
+        amounts.forEach(function(el) {
+            const monthly = parseInt(el.dataset.monthly, 10);
+            const annual = parseInt(el.dataset.annual, 10);
+            const display = isAnnual ? annual : monthly;
+            el.textContent = '$' + display.toLocaleString();
+        });
+
+        const badge = document.querySelector('.toggle-badge');
+        if (badge) {
+            badge.style.opacity = isAnnual ? '1' : '0.5';
+        }
+    });
+}
+
+// ===================================
+// Audit Form Handling
+// ===================================
+const auditForm = document.getElementById('auditForm');
+
+if (auditForm) {
+    auditForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = document.getElementById('auditSubmitButton');
+        const btnText = submitBtn.querySelector('.button-text');
+        const btnLoading = submitBtn.querySelector('.button-loading');
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'flex';
+
+        const formData = {
+            full_name:     document.getElementById('auditFullName').value.trim(),
+            business_name: document.getElementById('auditBusinessName').value.trim(),
+            email:         document.getElementById('auditEmail').value.trim(),
+            phone:         document.getElementById('auditPhone').value.trim(),
+            website:       '',
+            message: [
+                'Team size: ' + (document.getElementById('auditTeamSize').value || 'Not specified'),
+                'Hours/week on manual tasks: ' + (document.getElementById('auditHoursWeek').value || 'Not specified'),
+                'Pain points: ' + document.getElementById('auditPainPoints').value.trim(),
+            ].join('\n'),
+            source: 'roi_audit',
+        };
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+            const data = await response.json();
+            const msg = document.getElementById('auditFormMessage');
+            if (response.ok && data.success) {
+                msg.textContent = "Thanks! We'll have your audit ready within 24 hours. Check your email.";
+                msg.className = 'form-message success';
+                msg.style.display = 'block';
+                auditForm.reset();
+            } else {
+                msg.textContent = data.message || 'An error occurred. Please try again.';
+                msg.className = 'form-message error';
+                msg.style.display = 'block';
+            }
+        } catch (err) {
+            const msg = document.getElementById('auditFormMessage');
+            msg.textContent = 'An error occurred. Please try again.';
+            msg.className = 'form-message error';
+            msg.style.display = 'block';
+        } finally {
+            submitBtn.disabled = false;
+            btnText.style.display = 'block';
+            btnLoading.style.display = 'none';
+        }
+    });
+}
+
+// ===================================
+// Partner Application Form
+// ===================================
+const partnerForm = document.getElementById('partnerForm');
+
+if (partnerForm) {
+    partnerForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = document.getElementById('partnerSubmitButton');
+        const btnText = submitBtn.querySelector('.button-text');
+        const btnLoading = submitBtn.querySelector('.button-loading');
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'flex';
+
+        const formData = {
+            company_name:      document.getElementById('partnerCompanyName').value.trim(),
+            contact_name:      document.getElementById('partnerContactName').value.trim(),
+            contact_email:     document.getElementById('partnerEmail').value.trim(),
+            contact_phone:     document.getElementById('partnerPhone').value.trim(),
+            website:           document.getElementById('partnerWebsite').value.trim(),
+            years_in_business: document.getElementById('partnerYears').value,
+            client_count:      document.getElementById('partnerClients').value,
+            expected_volume:   document.getElementById('partnerVolume').value,
+            why_partner:       document.getElementById('partnerWhy').value.trim(),
+        };
+
+        try {
+            const response = await fetch('/api/partner/apply', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+            const data = await response.json();
+            const msg = document.getElementById('partnerFormMessage');
+            msg.textContent = data.message;
+            msg.className = 'form-message ' + (data.success ? 'success' : 'error');
+            msg.style.display = 'block';
+            if (data.success) {
+                partnerForm.reset();
+                window.scrollTo({ top: msg.offsetTop - 100, behavior: 'smooth' });
+            }
+        } catch (err) {
+            const msg = document.getElementById('partnerFormMessage');
+            msg.textContent = 'An error occurred. Please try again.';
+            msg.className = 'form-message error';
+            msg.style.display = 'block';
+        } finally {
+            submitBtn.disabled = false;
+            btnText.style.display = 'block';
+            btnLoading.style.display = 'none';
+        }
+    });
+}

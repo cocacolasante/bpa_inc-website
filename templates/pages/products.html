@@ -1,0 +1,207 @@
+{{define "content"}}
+
+<!-- Products Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title animate-fade-in-up">AI Automation Products</h1>
+        <p class="page-subtitle animate-fade-in-up delay-1">
+            14 purpose-built AI systems for every part of your business.
+            Get everything in a bundle or pick individual products.
+        </p>
+    </div>
+</section>
+
+<!-- Bundle Summary Strip -->
+<section class="section bundle-strip-section">
+    <div class="container">
+        <div class="section-header centered">
+            <h2 class="section-title">Save More With a Bundle</h2>
+            <p class="section-subtitle">
+                Bundles include every product from the current and all previous phases.
+                <a href="/pricing">See full comparison →</a>
+            </p>
+        </div>
+
+        <div class="bundle-strip-grid">
+
+            <div class="bundle-strip-card strip-foundation">
+                <div class="strip-header">
+                    <span class="strip-icon">🏗️</span>
+                    <div>
+                        <h3>Foundation</h3>
+                        <span class="strip-phase">Phase 1 · 4 products</span>
+                    </div>
+                </div>
+                <div class="strip-pricing">
+                    <div class="strip-price">$497<span>/mo</span></div>
+                    <div class="strip-setup">$897 setup</div>
+                    <div class="strip-savings">Save $393 + $227/mo</div>
+                </div>
+                <ul class="strip-products">
+                    <li>AI Webchat Agent</li>
+                    <li>Lead Capture Pipeline</li>
+                    <li>Email Triage &amp; Drafting</li>
+                    <li>Invoice &amp; Payment Automation</li>
+                </ul>
+                <a href="/pricing" class="btn-secondary btn-block">View Details</a>
+            </div>
+
+            <div class="bundle-strip-card strip-growth strip-popular">
+                <div class="strip-badge">Most Popular</div>
+                <div class="strip-header">
+                    <span class="strip-icon">🚀</span>
+                    <div>
+                        <h3>Growth</h3>
+                        <span class="strip-phase">Phase 1 + 2 · 9 products</span>
+                    </div>
+                </div>
+                <div class="strip-pricing">
+                    <div class="strip-price">$997<span>/mo</span></div>
+                    <div class="strip-setup">$1,997 setup</div>
+                    <div class="strip-savings">Save $1,281 + $570/mo</div>
+                </div>
+                <ul class="strip-products">
+                    <li>Everything in Foundation</li>
+                    <li>Review Response Automation</li>
+                    <li>Social Media Autopilot</li>
+                    <li>AI Customer Support Agent</li>
+                    <li>Appointment &amp; Scheduling</li>
+                    <li>Automated Proposal Generator</li>
+                </ul>
+                <a href="/pricing" class="btn-primary btn-block">View Details</a>
+            </div>
+
+            <div class="bundle-strip-card strip-premium">
+                <div class="strip-badge strip-badge-premium">Best Value</div>
+                <div class="strip-header">
+                    <span class="strip-icon">⚡</span>
+                    <div>
+                        <h3>Premium</h3>
+                        <span class="strip-phase">All phases · 14 products</span>
+                    </div>
+                </div>
+                <div class="strip-pricing">
+                    <div class="strip-price">$2,497<span>/mo</span></div>
+                    <div class="strip-setup">$4,997 setup</div>
+                    <div class="strip-savings">Save $6,371+ + $1,259/mo</div>
+                </div>
+                <ul class="strip-products">
+                    <li>Everything in Growth</li>
+                    <li>Sales Pipeline Automation</li>
+                    <li>Voice AI Agent</li>
+                    <li>Internal AI Assistant</li>
+                    <li>AI Operations Dashboard</li>
+                    <li>ROI Calculator &amp; Audit Tool</li>
+                </ul>
+                {{if .CalComURL}}
+                <a href="{{.CalComURL}}" target="_blank" class="btn-secondary btn-block">Book a Call</a>
+                {{else}}
+                <a href="/pricing" class="btn-secondary btn-block">View Details</a>
+                {{end}}
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Individual Self-Serve Products -->
+<section class="section">
+    <div class="container">
+        <div class="section-header centered">
+            <h2 class="section-title">Self-Serve Products</h2>
+            <p class="section-subtitle">Set up in minutes. Cancel anytime. No sales call needed.</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-icon">💬</div>
+                    <div class="product-badge">Most Popular</div>
+                </div>
+                <h3>AI Webchat Agent</h3>
+                <p class="product-description">
+                    A custom AI chat widget on your website trained on your business —
+                    answers questions, captures leads, and books appointments 24/7.
+                </p>
+                <ul class="product-features">
+                    <li>Trained on your FAQs and services</li>
+                    <li>Lead capture and qualification</li>
+                    <li>Appointment booking integration</li>
+                    <li>Live in 48 hours</li>
+                </ul>
+                <div class="product-pricing">
+                    <span class="product-price">$297</span>
+                    <span class="product-price-period">setup</span>
+                    <span class="product-price-monthly">+ $197/month</span>
+                </div>
+                <a href="/checkout/webchat" class="btn-primary btn-block btn-large">Get Started Now →</a>
+                <p class="product-guarantee">30-day money-back guarantee</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <div class="product-icon">⭐</div>
+                </div>
+                <h3>Review Response Automation</h3>
+                <p class="product-description">
+                    AI automatically responds to Google, Yelp, and Facebook reviews
+                    in your brand voice — 24/7, without manual effort.
+                </p>
+                <ul class="product-features">
+                    <li>Google, Yelp, and Facebook</li>
+                    <li>Brand-voice responses</li>
+                    <li>Approval queue for sensitive reviews</li>
+                    <li>Monthly review analytics</li>
+                </ul>
+                <div class="product-pricing">
+                    <span class="product-price">$197</span>
+                    <span class="product-price-period">setup</span>
+                    <span class="product-price-monthly">+ $99/month</span>
+                </div>
+                <a href="/checkout/reviews" class="btn-primary btn-block btn-large">Get Started Now →</a>
+                <p class="product-guarantee">30-day money-back guarantee</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Managed Products -->
+<section class="section" style="background:#f9f9f9;padding:80px 0;">
+    <div class="container">
+        <div class="section-header centered">
+            <h2 class="section-title">Managed Service Products</h2>
+            <p class="section-subtitle">
+                Custom setup and ongoing management. Start with a free audit
+                and we'll recommend what's right for your business.
+            </p>
+        </div>
+
+        <div class="product-grid managed-grid">
+            {{range .ManagedProducts}}
+            <div class="product-card managed">
+                <div class="product-icon">{{.Icon}}</div>
+                <h3>{{.Name}}</h3>
+                <p class="product-description">{{.Description}}</p>
+                <div class="product-pricing">
+                    <span class="product-price">{{.SetupFee}}</span>
+                    <span class="product-price-period">setup</span>
+                    <span class="product-price-monthly">+ {{.MonthlyFee}}/month</span>
+                </div>
+                <a href="/audit" class="btn-secondary btn-block">Get Free Audit →</a>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">Not sure what you need?</h2>
+            <p class="cta-text">Take the free audit and get a personalized product recommendation.</p>
+            <a href="/audit" class="btn-primary btn-large">Get Your Free Audit →</a>
+        </div>
+    </div>
+</section>
+
+{{end}}

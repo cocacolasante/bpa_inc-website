@@ -101,90 +101,99 @@
     <div class="container">
         <div class="section-header centered">
             <h2 class="section-title">Simple, Transparent Pricing</h2>
-            <p class="section-subtitle">No hidden fees, just clear value for your investment</p>
+            <p class="section-subtitle">
+                Choose a bundle that matches where your business is today.
+                Every bundle includes setup, hosting, maintenance, and support.
+            </p>
         </div>
 
         <div class="pricing-grid">
             <div class="pricing-card">
                 <div class="pricing-header">
-                    <h3 class="pricing-title">Standard Package</h3>
-                    <p class="pricing-subtitle">One-time setup with monthly support</p>
+                    <h3 class="pricing-title">Foundation</h3>
+                    <p class="pricing-subtitle">Phase 1 · 4 core products · Month-to-month</p>
                 </div>
                 <div class="pricing-price">
                     <span class="price-currency">$</span>
-                    <span class="price-amount">2,500</span>
-                    <span class="price-period">upfront</span>
+                    <span class="price-amount">897</span>
+                    <span class="price-period">setup</span>
                 </div>
                 <div class="pricing-support">
-                    <span class="support-price">$495/month</span>
-                    <span class="support-details">Hosting + Up to 15 hours support</span>
+                    <span class="support-price">$497/month</span>
+                    <span class="support-details">Hosting + maintenance + 10 hrs support</span>
                 </div>
                 <ul class="pricing-features">
-                    <li>Custom AI workflow development</li>
-                    <li>Full deployment and setup</li>
+                    <li>AI Webchat Agent</li>
+                    <li>Lead Capture Pipeline</li>
+                    <li>Email Triage &amp; Drafting</li>
+                    <li>Invoice &amp; Payment Automation</li>
                     <li>Cloud hosting included</li>
-                    <li>15 hours monthly support</li>
-                    <li>Regular updates and maintenance</li>
-                    <li>Email and chat support</li>
+                    <li>10 hours monthly support</li>
                 </ul>
-                <a href="/contact" class="btn-secondary btn-block">Get Started</a>
+                <a href="/pricing" class="btn-secondary btn-block">See Full Details</a>
             </div>
 
             <div class="pricing-card featured">
-                <div class="pricing-badge">Best Value</div>
+                <div class="pricing-badge">Most Popular</div>
                 <div class="pricing-header">
-                    <h3 class="pricing-title">6-Month Contract</h3>
-                    <p class="pricing-subtitle">Save $250 on setup costs</p>
+                    <h3 class="pricing-title">Growth</h3>
+                    <p class="pricing-subtitle">Phase 1 + 2 · 9 products · 6-month term</p>
                 </div>
                 <div class="pricing-price">
                     <span class="price-currency">$</span>
-                    <span class="price-amount">2,250</span>
-                    <span class="price-period">upfront</span>
+                    <span class="price-amount">1,997</span>
+                    <span class="price-period">setup</span>
                 </div>
                 <div class="pricing-support">
-                    <span class="support-price">$495/month</span>
-                    <span class="support-details">6-month commitment</span>
+                    <span class="support-price">$997/month</span>
+                    <span class="support-details">Save $570/mo vs. individual products</span>
                 </div>
                 <ul class="pricing-features">
-                    <li>Everything in Standard Package</li>
-                    <li><strong>Save $250 on setup</strong></li>
-                    <li>Priority support queue</li>
-                    <li>Quarterly strategy reviews</li>
-                    <li>Performance optimization</li>
-                    <li>Enhanced monitoring</li>
+                    <li>Everything in Foundation</li>
+                    <li>Review Response Automation</li>
+                    <li>Social Media Autopilot</li>
+                    <li>AI Customer Support Agent</li>
+                    <li>Appointment &amp; Scheduling</li>
+                    <li>Automated Proposal Generator</li>
                 </ul>
-                <a href="/contact" class="btn-primary btn-block">Save $250</a>
+                <a href="/pricing" class="btn-primary btn-block">See Full Details</a>
             </div>
 
             <div class="pricing-card">
-                <div class="pricing-badge premium">Premium</div>
+                <div class="pricing-badge premium">Best Value</div>
                 <div class="pricing-header">
-                    <h3 class="pricing-title">12-Month Contract</h3>
-                    <p class="pricing-subtitle">Maximum savings and benefits</p>
+                    <h3 class="pricing-title">Premium</h3>
+                    <p class="pricing-subtitle">All 14 products · 12-month term</p>
                 </div>
                 <div class="pricing-price">
                     <span class="price-currency">$</span>
-                    <span class="price-amount">2,000</span>
-                    <span class="price-period">upfront</span>
+                    <span class="price-amount">4,997</span>
+                    <span class="price-period">setup</span>
                 </div>
                 <div class="pricing-support">
-                    <span class="support-price">$495/month</span>
-                    <span class="support-details">12-month commitment</span>
+                    <span class="support-price">$2,497/month</span>
+                    <span class="support-details">Save $6,371+ on setup vs. individual</span>
                 </div>
                 <ul class="pricing-features">
-                    <li>Everything in 6-Month Package</li>
-                    <li><strong>Save $500 on setup</strong></li>
-                    <li>Dedicated support specialist</li>
-                    <li>Monthly strategy sessions</li>
-                    <li>Advanced workflow optimization</li>
-                    <li>Priority feature requests</li>
+                    <li>Everything in Growth</li>
+                    <li>Sales Pipeline Automation</li>
+                    <li>Voice AI Agent</li>
+                    <li>Internal AI Assistant</li>
+                    <li>AI Operations Dashboard</li>
+                    <li>ROI Calculator &amp; Audit Tool</li>
                 </ul>
-                <a href="/contact" class="btn-primary btn-block">Save $500</a>
+                {{if .CalComURL}}
+                <a href="{{.CalComURL}}" target="_blank" class="btn-primary btn-block">Book a Call</a>
+                {{else}}
+                <a href="/pricing" class="btn-primary btn-block">See Full Details</a>
+                {{end}}
             </div>
         </div>
 
         <div class="pricing-note">
-            <p>All packages include comprehensive onboarding, documentation, and training. Need a custom solution? <a href="/contact">Contact us</a> to discuss your specific requirements.</p>
+            <p>All bundles include comprehensive setup, cloud hosting, maintenance, and 10 hours
+            of monthly support. Need a custom solution or want to add individual products?
+            <a href="/pricing">See full pricing</a> or <a href="/contact">contact us</a>.</p>
         </div>
     </div>
 </section>
@@ -255,7 +264,7 @@
         <div class="cta-content">
             <h2 class="cta-title">Ready to Get Started?</h2>
             <p class="cta-text">Let's discuss how we can automate your business processes</p>
-            <a href="/contact" class="btn-primary btn-large">Schedule a Consultation</a>
+            <a href="/pricing" class="btn-primary btn-large">View Full Pricing →</a>
         </div>
     </div>
 </section>

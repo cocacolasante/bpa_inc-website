@@ -1,0 +1,131 @@
+{{define "content"}}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title animate-fade-in-up">Free Automation Audit</h1>
+        <p class="page-subtitle animate-fade-in-up delay-1">
+            Find out exactly how much time and money your team is leaving on the table —
+            and get a personalized roadmap to fix it. Takes 5 minutes.
+        </p>
+    </div>
+</section>
+
+<section class="section audit-section">
+    <div class="container">
+
+        {{if .ROIToolURL}}
+        <div class="roi-embed-wrapper">
+            <script
+                src="{{.ROIToolURL}}/blueprint-roi.js"
+                data-tenant-id="{{.ROITenantID}}"
+                async>
+            </script>
+            <div id="blueprint-roi-{{.ROITenantID}}"></div>
+        </div>
+        {{else}}
+
+        <div class="audit-fallback">
+            <div class="audit-intro">
+                <h2>Tell Us About Your Business</h2>
+                <p class="text-large">Answer a few questions and we'll prepare a custom
+                automation audit showing your biggest opportunities.</p>
+            </div>
+
+            <form id="auditForm" class="audit-form contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="auditFullName">Your Name *</label>
+                        <input type="text" id="auditFullName" required placeholder="Jane Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="auditBusinessName">Business Name *</label>
+                        <input type="text" id="auditBusinessName" required placeholder="Acme Corp">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="auditEmail">Email *</label>
+                        <input type="email" id="auditEmail" required placeholder="jane@acme.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="auditPhone">Phone *</label>
+                        <input type="tel" id="auditPhone" required placeholder="(555) 123-4567">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="auditTeamSize">Team Size</label>
+                    <select id="auditTeamSize">
+                        <option value="">Select...</option>
+                        <option value="1-5">Just me / 1–5 people</option>
+                        <option value="6-15">6–15 people</option>
+                        <option value="16-50">16–50 people</option>
+                        <option value="51+">51+ people</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="auditPainPoints">What takes up the most time in your business? *</label>
+                    <textarea id="auditPainPoints" required rows="4"
+                        placeholder="e.g. Email management, following up with leads, creating invoices, scheduling appointments, customer support..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="auditHoursWeek">Roughly how many hours/week does your team spend on manual, repetitive tasks?</label>
+                    <select id="auditHoursWeek">
+                        <option value="">Select...</option>
+                        <option value="1-5">1–5 hours</option>
+                        <option value="5-15">5–15 hours</option>
+                        <option value="15-30">15–30 hours</option>
+                        <option value="30+">30+ hours</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-primary btn-large btn-block" id="auditSubmitButton">
+                    <span class="button-text">Get My Free Audit →</span>
+                    <span class="button-loading" style="display:none;">
+                        <svg class="spinner" width="20" height="20" viewBox="0 0 50 50">
+                            <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                        </svg>
+                        Submitting...
+                    </span>
+                </button>
+
+                <div class="form-message" id="auditFormMessage"></div>
+            </form>
+        </div>
+        {{end}}
+
+    </div>
+</section>
+
+<section class="section audit-why-section">
+    <div class="container">
+        <div class="section-header centered">
+            <h2 class="section-title">What You'll Get</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⏱️</div>
+                <h3>Hours Recovered</h3>
+                <p>We'll calculate exactly how many hours per week your team is spending on automatable work.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Dollar Value</h3>
+                <p>See the annual dollar value of that time — most clients are surprised how large the number is.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🗺️</div>
+                <h3>Your Roadmap</h3>
+                <p>A prioritized list of automation opportunities specific to your business, with ROI for each.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>PDF Report</h3>
+                <p>Download your personalized automation audit as a PDF to share with your team.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{end}}

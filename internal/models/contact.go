@@ -13,12 +13,17 @@ type ContactSubmission struct {
 	Email        string `json:"email"`
 	Website      string `json:"website"`
 	Message      string `json:"message"`
+	Source       string `json:"source"` // "contact_form" | "roi_audit" | "self_serve_checkout"
 }
 
 var emailRegex = regexp.MustCompile(`^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$`)
 var phoneRegex = regexp.MustCompile(`^[\d\s\-\+\(\)]{10,}$`)
 
 func (c *ContactSubmission) Validate() error {
+	if c.Source == "" {
+		c.Source = "contact_form"
+	}
+
 	c.FullName = strings.TrimSpace(c.FullName)
 	c.BusinessName = strings.TrimSpace(c.BusinessName)
 	c.Phone = strings.TrimSpace(c.Phone)

@@ -1,0 +1,498 @@
+{{define "content"}}
+
+<!-- Pricing Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title animate-fade-in-up">Simple, Transparent Pricing</h1>
+        <p class="page-subtitle animate-fade-in-up delay-1">
+            Start with what you need. Upgrade as you grow. Every bundle includes
+            setup, hosting, maintenance, and support.
+        </p>
+        <div class="pricing-toggle-wrapper animate-fade-in-up delay-2">
+            <span class="toggle-label">Monthly</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="billingToggle">
+                <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label">
+                Annual <span class="toggle-badge">Save 10%</span>
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- Bundle Comparison -->
+<section class="section pricing-bundles-section">
+    <div class="container">
+
+        <div class="bundle-grid">
+
+            <!-- Foundation Bundle -->
+            <div class="bundle-card bundle-foundation">
+                <div class="bundle-tier-label">Phase 1</div>
+                <div class="bundle-icon">🏗️</div>
+                <h2 class="bundle-name">Foundation</h2>
+                <p class="bundle-tagline">Core business automation. Get the essentials running in one setup.</p>
+
+                <div class="bundle-price-block">
+                    <div class="bundle-setup">
+                        <span class="setup-label">Setup</span>
+                        <span class="setup-amount">$897</span>
+                        <span class="setup-was">was $1,290</span>
+                    </div>
+                    <div class="bundle-monthly">
+                        <span class="monthly-amount" data-monthly="497" data-annual="447">$497</span>
+                        <span class="monthly-period">/month</span>
+                    </div>
+                    <div class="bundle-savings">You save $393 on setup + $227/mo</div>
+                </div>
+
+                <div class="bundle-commitment">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Month-to-month · Cancel anytime
+                </div>
+
+                <ul class="bundle-products">
+                    <li><span class="product-num">1.1</span> AI Webchat Agent</li>
+                    <li><span class="product-num">1.2</span> Lead Capture Pipeline</li>
+                    <li><span class="product-num">1.3</span> Email Triage &amp; Drafting</li>
+                    <li><span class="product-num">1.4</span> Invoice &amp; Payment Automation</li>
+                </ul>
+
+                <a href="/audit" class="btn-bundle btn-bundle-foundation">
+                    Start with Foundation →
+                </a>
+                <p class="bundle-cta-note">Free audit first · No commitment required</p>
+            </div>
+
+            <!-- Growth Bundle -->
+            <div class="bundle-card bundle-growth bundle-featured">
+                <div class="bundle-badge">Most Popular</div>
+                <div class="bundle-tier-label">Phase 1 + 2</div>
+                <div class="bundle-icon">🚀</div>
+                <h2 class="bundle-name">Growth</h2>
+                <p class="bundle-tagline">The complete front-office stack. Every client touchpoint automated.</p>
+
+                <div class="bundle-price-block">
+                    <div class="bundle-setup">
+                        <span class="setup-label">Setup</span>
+                        <span class="setup-amount">$1,997</span>
+                        <span class="setup-was">was $3,278</span>
+                    </div>
+                    <div class="bundle-monthly">
+                        <span class="monthly-amount" data-monthly="997" data-annual="897">$997</span>
+                        <span class="monthly-period">/month</span>
+                    </div>
+                    <div class="bundle-savings">You save $1,281 on setup + $570/mo</div>
+                </div>
+
+                <div class="bundle-commitment">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    6-month minimum commitment
+                </div>
+
+                <ul class="bundle-products">
+                    <li class="inherited"><span class="product-num">1.1</span> AI Webchat Agent</li>
+                    <li class="inherited"><span class="product-num">1.2</span> Lead Capture Pipeline</li>
+                    <li class="inherited"><span class="product-num">1.3</span> Email Triage &amp; Drafting</li>
+                    <li class="inherited"><span class="product-num">1.4</span> Invoice &amp; Payment Automation</li>
+                    <li class="bundle-divider">Also includes:</li>
+                    <li><span class="product-num">2.1</span> Review Response Automation</li>
+                    <li><span class="product-num">2.2</span> Social Media Autopilot</li>
+                    <li><span class="product-num">2.3</span> AI Customer Support Agent</li>
+                    <li><span class="product-num">2.4</span> Appointment &amp; Scheduling</li>
+                    <li><span class="product-num">2.5</span> Automated Proposal Generator</li>
+                </ul>
+
+                <a href="/audit" class="btn-bundle btn-bundle-growth">
+                    Start with Growth →
+                </a>
+                <p class="bundle-cta-note">Free audit first · 6-month term</p>
+            </div>
+
+            <!-- Premium Bundle -->
+            <div class="bundle-card bundle-premium">
+                <div class="bundle-badge bundle-badge-premium">Best Value</div>
+                <div class="bundle-tier-label">All 14 Products</div>
+                <div class="bundle-icon">⚡</div>
+                <h2 class="bundle-name">Premium</h2>
+                <p class="bundle-tagline">The full AI business operating system. Every department automated.</p>
+
+                <div class="bundle-price-block">
+                    <div class="bundle-setup">
+                        <span class="setup-label">Setup</span>
+                        <span class="setup-amount">$4,997</span>
+                        <span class="setup-was">was $11,368+</span>
+                    </div>
+                    <div class="bundle-monthly">
+                        <span class="monthly-amount" data-monthly="2497" data-annual="2247">$2,497</span>
+                        <span class="monthly-period">/month</span>
+                    </div>
+                    <div class="bundle-savings">You save $6,371+ on setup + $1,259/mo</div>
+                </div>
+
+                <div class="bundle-commitment">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    12-month minimum commitment
+                </div>
+
+                <ul class="bundle-products">
+                    <li class="inherited"><span class="product-num">1.1–1.4</span> All Foundation Products</li>
+                    <li class="inherited"><span class="product-num">2.1–2.5</span> All Growth Products</li>
+                    <li class="bundle-divider">Also includes:</li>
+                    <li><span class="product-num">3.1</span> Sales Pipeline Automation</li>
+                    <li><span class="product-num">3.2</span> Voice AI Agent</li>
+                    <li><span class="product-num">3.3</span> Internal AI Assistant</li>
+                    <li><span class="product-num">3.4</span> AI Operations Dashboard</li>
+                    <li><span class="product-num">3.5</span> ROI Calculator &amp; Audit Tool</li>
+                </ul>
+
+                {{if .CalComURL}}
+                <a href="{{.CalComURL}}" target="_blank" class="btn-bundle btn-bundle-premium">
+                    Start with Premium →
+                </a>
+                {{else}}
+                <a href="/audit" class="btn-bundle btn-bundle-premium">
+                    Start with Premium →
+                </a>
+                {{end}}
+                <p class="bundle-cta-note">Discovery call required · 12-month term</p>
+            </div>
+
+        </div><!-- /bundle-grid -->
+
+        <p class="pricing-disclaimer">
+            All bundles include setup, cloud hosting, maintenance, patches, and up to 10 hours
+            of monthly support. Need something custom?
+            {{if .CalComURL}}<a href="{{.CalComURL}}">Book a call</a>{{else}}<a href="/contact">Contact us</a>{{end}}
+            and we'll build a package around your needs.
+        </p>
+
+    </div>
+</section>
+
+<!-- What's Included -->
+<section class="section included-section">
+    <div class="container">
+        <div class="section-header centered">
+            <h2 class="section-title">Every Bundle Includes</h2>
+        </div>
+        <div class="included-grid">
+            <div class="included-item">
+                <div class="included-icon">🛠️</div>
+                <h4>Full Setup &amp; Configuration</h4>
+                <p>We handle the complete implementation, tailored to your business.</p>
+            </div>
+            <div class="included-item">
+                <div class="included-icon">☁️</div>
+                <h4>Cloud Hosting</h4>
+                <p>All products run on our infrastructure. No servers to manage.</p>
+            </div>
+            <div class="included-item">
+                <div class="included-icon">🔧</div>
+                <h4>Maintenance &amp; Patches</h4>
+                <p>We keep everything updated and running. You focus on your business.</p>
+            </div>
+            <div class="included-item">
+                <div class="included-icon">📞</div>
+                <h4>10 hrs/mo Support</h4>
+                <p>Monthly support hours for updates, adjustments, and improvements.</p>
+            </div>
+            <div class="included-item">
+                <div class="included-icon">📊</div>
+                <h4>Monthly Reports</h4>
+                <p>Usage and performance reports delivered automatically every month.</p>
+            </div>
+            <div class="included-item">
+                <div class="included-icon">🔄</div>
+                <h4>New Feature Pushes</h4>
+                <p>When we ship improvements, your products update automatically.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add-Ons -->
+<section class="section addons-section">
+    <div class="container">
+        <div class="section-header centered">
+            <h2 class="section-title">Add-Ons</h2>
+            <p class="section-subtitle">Available on top of any bundle</p>
+        </div>
+        <div class="addons-grid">
+            <div class="addon-card">
+                <div class="addon-name">Additional Slack or Discord Workspace</div>
+                <div class="addon-price">$49<span>/mo</span></div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-name">Additional Cal.com Calendar Integration</div>
+                <div class="addon-price">$29<span>/mo</span></div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-name">White-Label Branding on Client-Facing Tools</div>
+                <div class="addon-price">$97<span>/mo</span></div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-name">Extra 10 hrs/mo Managed Support</div>
+                <div class="addon-price">$497<span>/mo</span></div>
+            </div>
+            <div class="addon-card">
+                <div class="addon-name">Quarterly Strategy Review Call</div>
+                <div class="addon-price">$297<span>/quarter</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Full Comparison Table -->
+<section class="section comparison-section">
+    <div class="container">
+        <div class="section-header centered">
+            <h2 class="section-title">Full Product Comparison</h2>
+            <p class="section-subtitle">See exactly what's in each bundle</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th class="product-col">Product</th>
+                        <th class="tier-col foundation-col">Foundation<br><small>$497/mo</small></th>
+                        <th class="tier-col growth-col">Growth<br><small>$997/mo</small></th>
+                        <th class="tier-col premium-col">Premium<br><small>$2,497/mo</small></th>
+                        <th class="tier-col individual-col">À la carte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="phase-header-row">
+                        <td colspan="5">Phase 1 — Foundation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Webchat Agent</strong><br><small>24/7 AI chat trained on your business</small></td>
+                        <td class="check foundation-col">✓</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$297 + $197/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lead Capture Pipeline</strong><br><small>Auto-capture and follow up every lead</small></td>
+                        <td class="check foundation-col">✓</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$497 + $149/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Email Triage &amp; Drafting</strong><br><small>AI sorts and drafts email responses</small></td>
+                        <td class="check foundation-col">✓</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$299 + $299/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Invoice &amp; Payment Automation</strong><br><small>Automated invoicing and follow-ups</small></td>
+                        <td class="check foundation-col">✓</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$197 + $79/mo</td>
+                    </tr>
+
+                    <tr class="phase-header-row">
+                        <td colspan="5">Phase 2 — Growth</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Review Response Automation</strong><br><small>AI responds to Google, Yelp, Facebook reviews</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$197 + $99/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social Media Autopilot</strong><br><small>AI content posted across all platforms</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$297 + $197/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Customer Support Agent</strong><br><small>Tier-1 support via chat and email</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$997 + $397/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Appointment &amp; Scheduling</strong><br><small>Booking, reminders, and no-show follow-ups</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$397 + $149/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Automated Proposal Generator</strong><br><small>Branded proposals sent in minutes</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$597 + $197/mo</td>
+                    </tr>
+
+                    <tr class="phase-header-row">
+                        <td colspan="5">Phase 3 — Premium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sales Pipeline Automation</strong><br><small>Full-funnel AI sales from prospect to contract</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="no-check growth-col">—</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$3,500 + $497/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Voice AI Agent</strong><br><small>AI answers calls, books appointments 24/7</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="no-check growth-col">—</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$1,500 + $397/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Internal AI Assistant</strong><br><small>Company-trained assistant for your team</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="no-check growth-col">—</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$3,000 + $597/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Operations Dashboard</strong><br><small>Real-time BI with daily AI briefings</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="no-check growth-col">—</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$3,000 + $497/mo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ROI Calculator &amp; Audit Tool</strong><br><small>Lead gen tool for your own website</small></td>
+                        <td class="no-check foundation-col">—</td>
+                        <td class="no-check growth-col">—</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">$597 + $197/mo</td>
+                    </tr>
+
+                    <tr class="phase-header-row">
+                        <td colspan="5">Included in all bundles</td>
+                    </tr>
+                    <tr>
+                        <td>Setup &amp; configuration</td>
+                        <td class="check foundation-col">✓</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">Included</td>
+                    </tr>
+                    <tr>
+                        <td>Cloud hosting &amp; infrastructure</td>
+                        <td class="check foundation-col">✓</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">Included</td>
+                    </tr>
+                    <tr>
+                        <td>Maintenance &amp; patches</td>
+                        <td class="check foundation-col">✓</td>
+                        <td class="check growth-col">✓</td>
+                        <td class="check premium-col">✓</td>
+                        <td class="individual-col">Included</td>
+                    </tr>
+                    <tr>
+                        <td>Monthly support hours</td>
+                        <td class="foundation-col">10 hrs</td>
+                        <td class="growth-col">10 hrs</td>
+                        <td class="premium-col">10 hrs</td>
+                        <td class="individual-col">10 hrs</td>
+                    </tr>
+                    <tr>
+                        <td>Commitment</td>
+                        <td class="foundation-col">Month-to-month</td>
+                        <td class="growth-col">6 months</td>
+                        <td class="premium-col">12 months</td>
+                        <td class="individual-col">Month-to-month</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="comparison-cta-row">
+                        <td></td>
+                        <td class="foundation-col">
+                            <a href="/audit" class="btn-table foundation">Get Started</a>
+                        </td>
+                        <td class="growth-col">
+                            <a href="/audit" class="btn-table growth">Get Started</a>
+                        </td>
+                        <td class="premium-col">
+                            {{if .CalComURL}}
+                            <a href="{{.CalComURL}}" target="_blank" class="btn-table premium">Book a Call</a>
+                            {{else}}
+                            <a href="/audit" class="btn-table premium">Get Started</a>
+                            {{end}}
+                        </td>
+                        <td class="individual-col">
+                            <a href="/products" class="btn-table individual">View Products</a>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+    <div class="container">
+        <div class="section-header centered">
+            <h2 class="section-title">Pricing FAQ</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>What does "setup" cover?</h4>
+                <p>Full configuration of every product in your bundle — connecting your tools,
+                training the AI on your business, testing, and going live. We do everything.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What's included in the monthly support hours?</h4>
+                <p>Adjustments, updates, new integrations, troubleshooting, and improvements
+                to your automation stack. Unused hours don't roll over.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I start with Foundation and upgrade later?</h4>
+                <p>Yes. You pay the difference in setup fees and move to the higher monthly rate.
+                We migrate your configuration — nothing is lost.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What happens after the commitment period?</h4>
+                <p>Everything moves to month-to-month at the same rate. Cancel with 30 days notice.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do I need technical knowledge to use these products?</h4>
+                <p>Not at all. We handle all implementation and you interact with simple dashboards
+                and reports. No technical skills required.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Can I add individual products to a bundle?</h4>
+                <p>Yes — any product from a higher tier can be added à la carte at individual pricing.
+                Or upgrade your whole bundle to the next tier.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 class="cta-title">Not sure which bundle is right?</h2>
+            <p class="cta-text">Take the free audit and we'll recommend the right starting point based on your business.</p>
+            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+                <a href="/audit" class="btn-primary btn-large">Get Your Free Audit →</a>
+                {{if .CalComURL}}
+                <a href="{{.CalComURL}}" target="_blank" class="btn-secondary btn-large">Book a Strategy Call</a>
+                {{end}}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{end}}

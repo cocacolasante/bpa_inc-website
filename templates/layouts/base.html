@@ -59,8 +59,20 @@
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="/" class="nav-link {{if eq .Page "home"}}active{{end}}">Home</a></li>
                     <li><a href="/about" class="nav-link {{if eq .Page "about"}}active{{end}}">About</a></li>
-                    <li><a href="/services" class="nav-link {{if eq .Page "services"}}active{{end}}">Services</a></li>
-                    <li><a href="/portfolio" class="nav-link {{if eq .Page "portfolio"}}active{{end}}">Portfolio</a></li>
+                    {{/* <li><a href="/services" class="nav-link {{if eq .Page "services"}}active{{end}}">Services</a></li> */}}
+                    <li><a href="/products" class="nav-link {{if eq .Page "products"}}active{{end}}">Products</a></li>
+                    <li><a href="/pricing" class="nav-link {{if eq .Page "pricing"}}active{{end}}">Pricing</a></li>
+                    {{/* <li><a href="/portfolio" class="nav-link {{if eq .Page "portfolio"}}active{{end}}">Portfolio</a></li> */}}
+                    <li><a href="/partners" class="nav-link {{if eq .Page "partners"}}active{{end}}">Partners</a></li>
+                    <li><a href="/audit" class="nav-link {{if eq .Page "audit"}}active{{end}}">Free Audit</a></li>
+                    {{if .CalComURL}}
+                    <li>
+                        <a href="{{.CalComURL}}" target="_blank" rel="noopener"
+                           class="nav-link btn-outline">
+                            Book a Call
+                        </a>
+                    </li>
+                    {{end}}
                     <li><a href="/contact" class="nav-link {{if eq .Page "contact"}}active{{end}} btn-primary">Get Started</a></li>
                 </ul>
             </div>
@@ -89,8 +101,13 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About Us</a></li>
                         <li><a href="/services">Services</a></li>
-                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        {{/* <li><a href="/portfolio">Portfolio</a></li> */}}
+                        <li><a href="/partners">Partners</a></li>
+                        <li><a href="/audit">Free Audit</a></li>
                         <li><a href="/contact">Contact</a></li>
+                        {{if .CalComURL}}<li><a href="{{.CalComURL}}" target="_blank">Book a Call</a></li>{{end}}
                     </ul>
                 </div>
 
@@ -108,7 +125,7 @@
                 <div class="footer-section">
                     <h4>Get In Touch</h4>
                     <p>Ready to automate your business?</p>
-                    <a href="/contact" class="btn-secondary">Contact Us</a>
+                    <a href="/audit" class="btn-secondary">Get Your Free Audit</a>
                 </div>
             </div>
 

@@ -7,8 +7,14 @@
             <h1 class="hero-title animate-fade-in-up">We Bring Structure to the Chaos</h1>
             <p class="hero-subtitle animate-fade-in-up delay-1">Building clean, automated AI systems that let your business run with clarity and ease</p>
             <div class="hero-buttons animate-fade-in-up delay-2">
-                <a href="/contact" class="btn-primary btn-large">Start Automating Today</a>
+                <a href="/audit" class="btn-primary btn-large">Get Your Free Audit →</a>
+                {{if .CalComURL}}
+                <a href="{{.CalComURL}}" target="_blank" rel="noopener" class="btn-secondary btn-large">
+                    Book a Free Call
+                </a>
+                {{else}}
                 <a href="/services" class="btn-secondary btn-large">Explore Services</a>
+                {{end}}
             </div>
         </div>
     </div>
@@ -22,19 +28,19 @@
     <div class="container">
         <div class="stats-grid">
             <div class="stat-item">
-                <h3 class="stat-number">2025</h3>
-                <p class="stat-label">Founded</p>
+                <h3 class="stat-number">14</h3>
+                <p class="stat-label">AI Products</p>
             </div>
             <div class="stat-item">
-                <h3 class="stat-number">100%</h3>
-                <p class="stat-label">Client Satisfaction</p>
+                <h3 class="stat-number">3</h3>
+                <p class="stat-label">Bundle Tiers</p>
             </div>
             <div class="stat-item">
                 <h3 class="stat-number">24/7</h3>
                 <p class="stat-label">Automated Workflows</p>
             </div>
             <div class="stat-item">
-                <h3 class="stat-number">15hrs</h3>
+                <h3 class="stat-number">10hrs</h3>
                 <p class="stat-label">Monthly Support</p>
             </div>
         </div>
@@ -119,13 +125,33 @@
     </div>
 </section>
 
+<!-- Cal.com CTA Strip -->
+{{if .CalComURL}}
+<section class="section cal-strip">
+    <div class="container">
+        <div class="cal-strip-content">
+            <div class="cal-strip-text">
+                <h3>Not sure where to start? Let's talk.</h3>
+                <p>30-minute strategy call. No pitch, no pressure. Just clarity on what automation could do for your business.</p>
+            </div>
+            <a href="{{.CalComURL}}" target="_blank" rel="noopener" class="btn-primary btn-large">
+                Book a Free Strategy Call →
+            </a>
+        </div>
+    </div>
+</section>
+{{end}}
+
 <!-- CTA Section -->
 <section class="cta-section">
     <div class="container">
         <div class="cta-content">
             <h2 class="cta-title">Ready to Automate Your Business?</h2>
-            <p class="cta-text">Join the businesses already transforming their operations with AI automation</p>
-            <a href="/contact" class="btn-primary btn-large">Get Started Today</a>
+            <p class="cta-text">Start with a free audit or see exactly what's in each bundle.</p>
+            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+                <a href="/audit" class="btn-primary btn-large">Get Your Free Audit →</a>
+                <a href="/pricing" class="btn-secondary btn-large">View Pricing</a>
+            </div>
         </div>
     </div>
 </section>
