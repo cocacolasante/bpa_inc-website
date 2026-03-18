@@ -53,11 +53,16 @@ func (h *PageHandler) renderTemplate(w http.ResponseWriter, page string, data in
 }
 
 func (h *PageHandler) baseData(title, description, page string) map[string]interface{} {
+	chatBase := os.Getenv("BLUEPRINT_CHAT_URL")
+	chatTenantID := os.Getenv("BLUEPRINT_CHAT_TENANT_ID")
 	return map[string]interface{}{
-		"Title":       title,
-		"Description": description,
-		"Page":        page,
-		"CalComURL":   os.Getenv("CAL_COM_URL"),
+		"Title":            title,
+		"Description":      description,
+		"Page":             page,
+		"CalComURL":        os.Getenv("CAL_COM_URL"),
+		"ChatWidgetSrc":    template.URL(chatBase + "/widget.js"),
+		"ChatAPIBase":      chatBase,
+		"ChatTenantID":     chatTenantID,
 	}
 }
 
