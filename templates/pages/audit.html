@@ -13,14 +13,7 @@
     <div class="container">
 
         {{if .ROIToolURL}}
-        <div class="roi-embed-wrapper">
-            <script
-                src="{{.ROIToolURL}}/blueprint-roi.js"
-                data-tenant-id="{{.ROITenantID}}"
-                async>
-            </script>
-            <div id="blueprint-roi-{{.ROITenantID}}"></div>
-        </div>
+        <script src="{{.ROIToolURL}}/embed/blueprint-roi.js" data-tenant-id="{{.ROITenantID}}" defer></script>
         {{else}}
 
         <div class="audit-fallback">

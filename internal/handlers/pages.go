@@ -112,7 +112,7 @@ func (h *PageHandler) Audit(w http.ResponseWriter, r *http.Request) {
 		"Find out how many hours per week your team could win back with AI automation. Free personalized report.",
 		"audit",
 	)
-	data["ROIToolURL"] = os.Getenv("ROI_TOOL_URL")
+	data["ROIToolURL"] = template.URL(os.Getenv("ROI_TOOL_URL"))
 	data["ROITenantID"] = os.Getenv("ROI_TENANT_ID")
 	h.renderTemplate(w, "audit", data)
 }
