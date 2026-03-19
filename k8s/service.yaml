@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bpa-website
+  namespace: bpa-website
+  labels:
+    app: bpa-website
+spec:
+  selector:
+    app: bpa-website
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080

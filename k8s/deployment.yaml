@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bpa-website
+  namespace: bpa-website
+  labels:
+    app: bpa-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bpa-website
+  template:
+    metadata:
+      labels:
+        app: bpa-website
+    spec:
+      imagePullSecrets:
+      - name: ghcr-secret
+      containers:
+      - name: bpa-website
+        image: ghcr.io/cocacolasante/bpa-website:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ENV
+          value: "production"
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "200m"
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080
+          initialDelaySeconds: 15
+          periodSeconds: 30
+          failureThreshold: 3
